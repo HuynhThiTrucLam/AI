@@ -1,7 +1,5 @@
-
-# utils.py
-
 import pandas as pd
+from math import inf
 
 def h(node, heuristic):
     """Returns the heuristic value for a node."""
@@ -10,6 +8,14 @@ def h(node, heuristic):
 def neighbors(node, graph):
     """Returns the neighbors of a given node from the graph."""
     return graph.get(node, [])
+
+# Hàm tính chi phí từ node hiện tại đến các láng giềng
+def cost(current, neighbor, graph):
+    for neighbor_node, edge_cost in graph[current]:
+        if neighbor_node == neighbor:
+            return edge_cost
+    return inf  # Nếu không có cạnh, trả về vô cùng
+
 
 def reconstruct_path(came_from, current):
     """Reconstruct the path from start to goal using the came_from dictionary."""
