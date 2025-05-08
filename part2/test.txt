@@ -1,1 +1,3 @@
 source tictactoe_env/bin/activate
+python3 tichtactoe.py
+deactivate

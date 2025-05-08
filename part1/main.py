@@ -3,6 +3,8 @@
 from algorithms.get_input import get_input
 from algorithms.best_first_search import best_first_search
 from algorithms.hill_climbing import hill_climbing
+from algorithms.a_star import a_star
+from algorithms.branch_and_bound import branch_and_bound
 
 def choose_algorithm():
     """Display algorithm options and get user input."""
@@ -21,6 +23,10 @@ def choose_algorithm():
             return best_first_search
         elif choice == 2:
             return hill_climbing
+        elif choice == 3:
+            return a_star
+        elif choice == 4:
+            return branch_and_bound
         elif choice == 5:
             return None  # Return None to exit the program
         else:

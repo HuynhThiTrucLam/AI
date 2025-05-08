@@ -1,5 +1,5 @@
 from queue import PriorityQueue
-from algorithms.utils import h, neighbors, reconstruct_path, print_table
+from algorithms.utils import h, neighbors, reconstruct_path
 
 def best_first_search(graph, heuristic, start, goal):
     open_set = PriorityQueue() 
